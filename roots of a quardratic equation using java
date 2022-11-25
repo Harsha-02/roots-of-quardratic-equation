@@ -1,0 +1,37 @@
+import java.util.Scanner;
+public class main
+{
+    public static void main(String[] args) 
+    {
+        double a,b,c,x1,x2,x,r,im,d;
+        Scanner sc= new Scanner(System.in);
+        System.out.println("enter the coefficient of x^2 : ");
+        a=sc.nextDouble();
+         System.out.println("enter the coefficient of x : ");
+        b=sc.nextDouble();
+         System.out.println("enter the constant : ");
+        c=sc.nextDouble();
+        d=b*b-(4*a*c);
+        if(d>0)
+        {
+            System.out.println("The roots are real and different" );
+            x1=(-b+Math.sqrt(d))/(2*a);
+            x2=(-b+Math.sqrt(d))/(2*a);
+            System.out.println("the roots are "+x1+" and "+x2);
+        }
+        else if(d==0)
+        {
+            System.out.println("The roots are real and same" );
+            x=-b/(2*a);
+            System.out.println("the roots is "+x);
+        }
+        else
+        {
+            System.out.println("The roots are imaginary and different ");
+            r=-b/(2*a);
+            im=(Math.sqrt(-d))/(2*a);
+            System.out.println("the roots are "+r+"+"+im+" and "+r+"-"+im);
+        }
+        
+    }
+}
